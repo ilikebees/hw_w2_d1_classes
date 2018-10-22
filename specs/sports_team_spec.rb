@@ -45,8 +45,20 @@
 
 require('minitest/autorun')
 require('minitest/rg')
-require_relative(../sports_team)
+require_relative('../sports_team')
 
 class TestSportsTeam < MiniTest::Test
 
-  
+  def setup
+    @players = ["John", "Ralph", "Alfie"]
+    @team = SportsTeam.new("Tigers", @players, "Bruce")
+  end
+
+  def test_team_name
+    expected = "Tigers"
+    actual = @name.name
+    assert_equal(expected, actual)
+
+  end
+
+end

@@ -23,6 +23,20 @@ class TestStudent < MiniTest::Test
       assert_equal(expected, actual)
     end
 
+    def test_set_name
+      @student.set_name("Robert")
+      expected = "Robert"
+      actual = @student.name
+      assert_equal(expected, actual)
+    end
+
+    def test_set_cohort
+      @student.set_cohort("e18")
+      expected = "e18"
+      actual = @student.cohort
+      assert_equal(expected, actual)
+    end
+
     def test_student_talk
       expected = "I can talk!"
       actual = @student.talk()
