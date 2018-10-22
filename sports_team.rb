@@ -1,49 +1,51 @@
-# class SportsTeam
-#   attr_reader :name, :players
-#   attr_accessor :coach, :points
-#
-#   def initialize(name, players, coach, points)
-#     @name = name
-#     @players = players
-#     @coach = coach
-#     @points = points
-#   end
-#
-#   # def name
-#   #   return @name
-#   # end
-#   #
-#   # def players
-#   #   return @players
-#   # end
-#   #
-#   # def coach
-#   #   return @coach
-#   # end
-#
-#   def change_coach(new_coach)
-#     @coach = new_coach
-#   end
-#
-#   def add_player(new_player)
-#     @players << new_player
-#   end
-#
-#   def players_in_team(player)
-#     for person in @players
-#       if person == player
-#         return true
-#       end
-#     end
-#     return false
-#   end
-#
-#   def add_point(result)
-#     if result == "win"
-#       return @points += 1
-#    elsif result == "lose"
-#       return @points
-#     end
-#   end
-#
-# end
+#Exercise B
+
+class Team
+
+  attr_reader :name, :players
+  attr_accessor :coach, :points
+
+  def initialize(name,players,coach)
+    @name = name
+    @players = players
+    @coach = coach
+    @points = 0
+
+  end
+
+=begin
+  def name
+    return @name
+  end
+
+  def players
+    return @players
+  end
+
+  def coach
+    return @coach
+  end
+
+  def set_coach(coach_name)
+    return @coach = coach_name
+  end
+=end
+
+  def add_player(new_player)
+    @players << new_player
+  end
+
+  def check_player_in_team?(player)
+    @players.include?(player)
+  end
+
+  def update_points(result)
+    if result == "win"
+      @points += 1
+    elsif result == "loss"
+      @points -= 1
+    end
+
+  end
+
+end

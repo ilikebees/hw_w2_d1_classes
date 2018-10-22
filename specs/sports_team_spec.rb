@@ -1,4 +1,4 @@
-#Exercise B 
+#Exercise B
 require('minitest/autorun')
 require('minitest/rg')
 require_relative('../sports_team')
