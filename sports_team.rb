@@ -42,8 +42,7 @@ class Team
   def update_points(result)
     if result == "win"
       @points += 1
-    elsif result == "loss"
-      @points -= 1
+    
     end
 
   end

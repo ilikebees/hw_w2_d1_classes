@@ -59,14 +59,6 @@ class TestTeam < MiniTest::Test
     assert_equal(expected, actual)
   end
 
-  def test_points_updated
-    @team.update_points("win")
-    @team.update_points("win")
-    @team.update_points("loss")
-    @team.update_points("win")
-    expected = 2
-    actual = @team.points
-    assert_equal(expected, actual)
-  end
+
 
 end
